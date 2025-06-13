@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HYBRID</title>
+    <style>
+       #one{
+               animation-name: myanimation ;
+               animation-duration: 5s;
+               animation-iteration-count: infinite;
+           animation:myanimation 3s infinite;
+       }
+       #two{
+           animation:slidein 5s infinite;
+       }
+       #seven{
+           background-color: red;
+           width: 200px;
+           height: 200px;
+           animation-name: spin;
+           animation-duration: 3s;
+           animation-iteration-count: 7;
+       }
+       #btn{
+           background-color: grey;
+           padding: 10px 20px;
+           color: white;
+           border:none;
+           transition:background-color 0.4s ease ,transform 0.4s ease;
+       }
+       #btn:hover{
+           background-color: brown;
+           transform: scale(1.1);
+       }
+       @keyframes spin {
+           0%{transform:rotate(0deg);
+           background-color: blue;}
+           50%{transform:rotate(180deg);
+           background-color: orangered}
+           100%{transform: rotate(360deg);
+           background-color: green;}
+       }
+       @keyframes slidein {
+           0%{transform:translateX(100px);
+           color: navy;}
+           100%{transform: translateX(400px);
+           color: darkgoldenrod;}
+       }
+       @keyframes myanimation {
+           0%{color: darkmagenta;}
+           50%{color: red}
+           100%{color:gold}
+       }
+    </style>
+</head>
+<body>
+<h1 id="two">Welcome to my laboratory</h1>
+<p id="one">I am a software engineer.</p>
+<div id="seven">
+    <p>electrical engineering is cool</p>
+</div>
+<button id="btn">click me</button>
+</body>
+</html>
